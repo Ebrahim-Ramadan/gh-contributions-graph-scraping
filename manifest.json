@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "gh contributions-graph scraping",
+  "version": "1.0",
+  "description": "see your github contributions graph here",
+  "permissions": ["tabs", "activeTab", "downloads"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon.svg",
+      "48": "assets/icon.svg",
+      "128": "assets/icon.svg"
+    }
+  },
+  "icons": {
+    "16": "assets/icon.svg",
+    "48": "assets/icon.svg",
+    "128": "assets/icon.svg"
+  },
+  "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+}
